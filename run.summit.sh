@@ -6,7 +6,7 @@
 #BSUB -B
 #BSUB -nnodes 1
 
-TAU2DIR=`pwd`/tau2
+TAU2DIR=/gpfs/alpine/proj-shared/csc303/pdavis/tau2
 export PATH=$PATH:${TAU2DIR}/ibm64linux/bin
 atmode=trace
 
