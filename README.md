@@ -1,6 +1,6 @@
 # Using the TAU-based profiling stubs in ADIOS2
 1. Installing TAU:
-  * [TAU2 repo](git@github.com:UO-OACISS/tau2.git)
+  * [TAU2 repo](https://github.com/UO-OACISS/tau2.git)
   * `./configure -mpi -pthread -bfd=download`
     * These `configure` options build support for intercepting MPI and individuating thread context. TAU needs binutils, and `bfd=download` tells it to do just download it.
   * `make install`
