@@ -35,6 +35,11 @@
       
   * `tau_exec` behavior is guided by environment variables. Tau can (among other things) generate profiling data (statistics on timers, samples, and events) and tracing data (the story of what happened in each process, roughkly synchronized.)
   * Profiling data is viewed with `paraprof`
+    export TAU_CALLPATH=1 
+    export TAU_CALLPATH_DEPTH=100 
+    export TAU_EBS_KEEP_UNRESOLVED_ADDR=1
+    export TAU_PROFILE_PREFIX=driver
+    export TAU_PROFILE_FORMAT=merged
   * Tracing data is viewed with `jumpshot`
  
  
