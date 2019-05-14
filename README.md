@@ -5,8 +5,9 @@
   * `make install`
     * By default, TAU installs in a subdirectory of the source. The subdirectory depends on the architecture, e.g. `x86_64/` on an x86 machine, `ibm64linux` on Summit, etc. This can be customized with `-prefix`.
 2. Installing ADIOS2:
-  * At present, a shared build of ADIOS2 is **required** for profiling to work.
-  * Profiling will be compiled-in as long as a shared build is being done. Profiling can be disabled by passing the `-DADIOS2_USE_Profiling=False` option to cmake. **NOTE: if my PR hasn't gone through yet, profiling can be enabled by uncommenting ADIOS2/source/adios2/toolkit/profiling/taustubs/tautimer.hpp line 12, and ADIOS2/source/adios2/toolkit/profiling/taustubs/taustubs.h line 13.**
+
+  At present, a shared build of ADIOS2 is **required** for profiling to work. Profiling will be compiled-in as long as a shared build is being done. Profiling can be disabled by passing the `-DADIOS2_USE_Profiling=False` option to cmake. **NOTE: if my PR hasn't gone through yet, profiling can be enabled by uncommenting ADIOS2/source/adios2/toolkit/profiling/taustubs/tautimer.hpp line 12, and ADIOS2/source/adios2/toolkit/profiling/taustubs/taustubs.h line 13.**
+  
 3. Including the profiling headers:
   * In the ADIOS2 repo, there are distinct bindings for C and C++, and they can be found in `source/adios2/toolkit/profiling/taustubs`.
   * The C bindings require including `taustubs.h`
@@ -22,6 +23,5 @@
   * `TAU_SCOPED_TIMER_FUNC()`: start a timer with a procedurally-generated name that stops when the current scope ends.
   * `TAU_SCOPED_TIMER(const char *name)`: start a named timer that stops when the current scope ends.
   
-  
-  
+5. The driver repo
   
