@@ -7,8 +7,6 @@ using namespace std;
 
 int main(int argc, char *argv[])
 {
-    int i;
-
     MPI_Init(&argc, &argv);
 
     cout<<"Starting Timer..."<<endl;
